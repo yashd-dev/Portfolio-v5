@@ -1,0 +1,22 @@
+---
+const data = [
+  ["https://discordapp.com/users/353541288907505676", "Discord"],
+  ["https://www.linkedin.com/in/yash-deshpande-224431219/", "Linkedin"],
+  ["http://github.com/yashd-dev", "Github"],
+  ["mailto:yashdeshpande415@protonmail.com", "E-Mail"]
+];
+---
+<h3 class="text-2xl md:text-3xl text-neutral-100">Where to find me?</h3>
+<ul role="list" class="flex flex-row gap-2">
+    <li>/</li> 
+  {data.map((key) => (
+    <li>
+      <a
+        href={key[0]}
+        class="hover:text-neutral-100"
+        rel="noreferrer"
+        target="_blank">{key[1]}</a>
+    </li>
+    <li>/</li> 
+  ))}
+</ul>

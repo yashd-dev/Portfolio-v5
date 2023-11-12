@@ -1,0 +1,91 @@
+---
+const projects = [
+  [
+    "Rock Paper Scissors Game!",
+    "This Game is made with OpenCV and Mediapipe.",
+    "https://github.com/yashd-dev/RPS-using-OpenCv",
+  ],
+  [
+    "A Chat Application!",
+    "Made with Next.js, Tailwind, DaisyUI, Firebase and ChatEngine.",
+    "https://github.com/Amazing-ChatApp",
+  ],
+  [
+    "Landing Page for A Workshop",
+    "Made with Flask, Tailwind, HTML, JS",
+    "https://pfe.mpstme.hosting.acm.org/",
+  ],
+  [
+    "A Platform for Develoers to Help Each-other out!",
+    "Made With Next.js, Tailwind, Firebase, CodeMirror",
+    "https://codeconnectt.vercel.app/",
+  ],
+  [
+    "A Website For My Dad's Company!",
+    "This is a simple landing page made with WebSlides.",
+    "https://mediethics-yashd.web.app/",
+  ],
+];
+const soon = [
+  ["A Monthly Newsletter", "Made With Astro and Tailwind"],
+  ["Landing Page for College  Festival!", "Made With React and Tailwind"],
+];
+---
+
+<h2 class="text-2xl md:text-3xl text-neutral-100">My Projects</h2>
+<section class="flex flex-col gap-4">
+  {
+    projects.map((key) => (
+      <a
+        class="flex w-full flex-col justify-between gap-2 rounded-xl border-2 border-neutral-700 p-4 transition-all duration-300 hover:scale-105 hover:border-neutral-400 md:flex-row md:items-center"
+        href={key[2]}
+        target="_blank"
+        rel="noreferrer"
+      >
+        <>
+          <div class="flex flex-col gap-4 md:flex-row md:items-center">
+            <>
+              <p class="text-neutral-100">{key[0]}</p>
+              <p>{key[1]}</p>
+            </>
+          </div>
+          <svg
+            width="18"
+            height="18"
+            viewBox="0 0 18 18"
+            fill="none"
+            class="transition-all duration-300 group-hover:translate-x-1"
+          >
+            <>
+              <path
+                d="M5.25 12.75L12.75 5.25"
+                stroke="#999999"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M5.25 5.25H12.75V12.75"
+                stroke="#999999"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </>
+          </svg>
+        </>
+      </a>
+    ))
+  }
+
+  {
+    soon.map((key) => (
+      <div class="flex w-full flex-col justify-between gap-2 rounded-md border border-neutral-700 p-4 md:flex-row md:items-center">
+        <>
+          <div class="flex flex-col gap-2 md:flex-row md:items-center md:gap-4">
+            <p class="text-neutral-100">{key[0]}</p>
+          </div>
+          <p class="w-fit rounded-md bg-neutral-900 px-4 py-1">In Progress!</p>
+        </>
+      </div>
+    ))
+  }
+</section>
