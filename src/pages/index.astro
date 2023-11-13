@@ -8,14 +8,41 @@ import Projects from "../components/projects.astro";
 
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <!-- Primary Meta Tags -->
+    <title>Yash D's Portfolio</title>
+    <meta name="title" content="Yash D's Portfolio" />
+    <meta name="description" content="A portfolio page of Yash Deshpande :)" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://yashd-dev.vercel.app/" />
+    <meta property="og:title" content="Yash D's Portfolio" />
+    <meta
+      property="og:description"
+      content="A portfolio page of Yash Deshpande :)"
+    />
+    <meta property="og:image" content="/preview.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://yashd-dev.vercel.app/" />
+    <meta property="twitter:title" content="Yash D's Portfolio" />
+    <meta
+      property="twitter:description"
+      content="A portfolio page of Yash Deshpande :)"
+    />
+    <meta
+      property="twitter:image"
+      content="/preview.png"
+    />
+
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width" />
     <link
       href="https://api.fontshare.com/v2/css?f[]=bespoke-serif@1&display=swap"
       rel="stylesheet"
     />
-    <title>Astro</title>
   </head>
   <body
     class="bg mx-auto flex min-h-screen max-w-[872px] overflow-x-hidden flex-col gap-9 bg-neutral-950 px-10 py-8 text-sm text-neutral-400 md:gap-20 md:py-16 selection:bg-red-300 selection:text-black"
