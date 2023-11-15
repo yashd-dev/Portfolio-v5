@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap");
 @font-face {
   font-family: "Chloe";
   src: url("Chloe-Regular.otf");
@@ -8,10 +9,11 @@
   src: url("Satoshi-Variable.ttf");
 }
 
-h1,
-h2,
-h3,
-.chloe {
+@font-face {
+  font-family: "Lovelo";
+  src: url("Lovelo-Black.ttf");
+}
+.serif {
   font-family:
     Chloe,
     sans-serif,
@@ -26,6 +28,9 @@ h3,
     "Open Sans",
     "Helvetica Neue";
 }
+h1,
+h2,
+h3,
 p,
 .satoshi {
   font-family:
@@ -41,6 +46,7 @@ p,
     "Open Sans",
     "Helvetica Neue",
     sans-serif;
+  /* @apply tracking-wider leading-10; */
 }
 
 .animate-spin-slow {
@@ -58,8 +64,12 @@ p,
   background-image: url("/src/public/234.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed; 
+  background-attachment: fixed;
   background-position: center;
   position: sticky;
   z-index: -100;
+}
+
+.article {
+  @apply my-auto prose prose-invert prose-zinc prose-img:!max-h-[20rem] md:prose-img:!max-h-[15rem] prose-img:rounded-xl prose-img:shadow-2xl prose-img:object-cover;
 }
