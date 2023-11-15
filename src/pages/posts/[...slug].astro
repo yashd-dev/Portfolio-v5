@@ -1,0 +1,27 @@
+---
+import { getCollection } from "astro:content";
+import Gradient from "../../components/gradient.astro";
+import Layout from "../../layout/Layout.astro";
+
+import "../../styles/globals.css";
+export async function getStaticPaths() {
+  const blogEntries = await getCollection("posts");
+  return blogEntries.map((entry) => ({
+    params: { slug: entry.slug },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+import { fade } from "astro:transitions";
+---
+
+<Layout transition:name="hero">
+  <article class="my-auto prose prose-invert prose-zinc">
+    <h1 transition:name="post-title" transition:animate="slide">
+      {entry.data.title}
+    </h1>
+    <Content transition:animate={fade({ duration: "30s" })} />
+  </article>
+</Layout>

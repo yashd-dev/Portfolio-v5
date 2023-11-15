@@ -1,0 +1,38 @@
+---
+import { getCollection } from "astro:content";
+const allPosts = await getCollection("posts");
+import "../../styles/globals.css";
+import Gradient from "../../components/gradient.astro";
+
+import Layout from "../../layout/Layout.astro";
+import { Image } from "astro:assets";
+---
+
+<Layout transition:name="hero">
+  <main class="flex flex-col gap-10 justify-center my-auto">
+    {
+      allPosts.map((post) => (
+        <a
+          class="flex w-full flex-col justify-between gap-2 rounded-xl border-2 border-neutral-700 p-4 transition-all duration-300 hover:scale-105 hover:border-neutral-400 md:flex-row md:items-center"
+          href={`/posts/${post.slug}/`}
+          rel="noreferrer"
+        >
+          <div class="flex flex-col md:flex-row gap-2">
+            <img
+              src={post.data.image.url}
+              alt=""
+              class="max-w-[20%] object-fill opacity-70 md:opacity-90 sepia-[40%] rounded-xl"
+            />
+            <div>
+              <h3 class="text-lg font-bold">{post.data.title}</h3>
+              <p class="text-base">{post.data.description}</p>
+              <p class="text-sm text-neutral-500">
+                {String(post.data.pubDate).slice(0, 15)}
+              </p>
+            </div>
+          </div>
+        </a>
+      ))
+    }
+  </main>
+</Layout>

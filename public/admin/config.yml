@@ -1,0 +1,26 @@
+backend:
+  name: github
+  repo: yashd-dev/Portfolio-v5 #replace with your githu repo
+  branch: master
+  squash_merges: true
+  open_authoring: true
+
+publish_mode: editorial_workflow
+media_folder: src/public/images
+public_folder: /images
+site_url: " https://yashd-dev.vercel.app/ " # your site name
+
+collections:
+  - name: post
+    label: Posts
+    folder: src/pages/posts
+    create: true
+    format: frontmatter
+    preview_path: post/{{slug}}
+    fields:
+      - { name: title, label: Title }
+      - { name: description, label: Description }
+      - { name: publishedAt, label: Date, widget: date }
+      - {label: "Publish", name: "isPublish", widget: "boolean", default: true}
+      - {label: "Draft", name: "isDraft", widget: "boolean", default: false}
+      - { name: body, label: Body, widget: markdown }
