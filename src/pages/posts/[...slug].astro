@@ -19,10 +19,14 @@ import { fade } from "astro:transitions";
 
 <Layout transition:name="hero">
 	<article class="article">
-		<h1 transition:name={entry.slug} transition:animate="fade">
+		<h1 transition:name={`${entry.slug} title`} transition:animate="fade">
 			{entry.data.title}
 		</h1>
-		<img src={entry.data.image.url} />
+		<img
+			src={entry.data.image.url}
+			transition:name={`${entry.slug} image`}
+			transition:animate="fade"
+		/>
 		<Content transition:animate={fade({ duration: "30s" })} />
 	</article>
 </Layout>
