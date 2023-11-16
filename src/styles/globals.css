@@ -1,17 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap");
-@font-face {
-  font-family: "Chloe";
-  src: url("Chloe-Regular.otf");
-}
-
 @font-face {
   font-family: "Satoshi";
   src: url("Satoshi-Variable.ttf");
-}
-
-@font-face {
-  font-family: "Lovelo";
-  src: url("Lovelo-Black.ttf");
 }
 .serif {
   font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
