@@ -2,7 +2,7 @@
 title: Making of Rock Paper Scissors Using OpenCV and Mediapipe
 description: "My Experience in building this project!"
 image:
-  url: "/src/public/RPS Screenshot.png"
+  url: "/images/RPS-Screenshot.png"
   alt: "Preview of My Game"
 pubDate: 2023-11-16
 ---
@@ -11,7 +11,7 @@ pubDate: 2023-11-16
 
 I made this game simply for the purpose of learning about OpenCV and as my semester end Python project. The game is simple and straight forward and the codebase is also the same. It sure was a headache to make, especially implementing MediaPipe because Google's documentation was a bit difficult for me to understand and other tutorials out there were not aligning with my vision for this project.
 
-**_Here is the codebase for my project._** I have documented each and everything as comments in the Jupyter Notebook itself. If I have missed out on something, you could open an issue or pull-request on Github or email me about it.
+[**_Here is the codebase for my project._**](https://github.com/yashd-dev/RPS-using-OpenCv) I have documented each and everything as comments in the Jupyter Notebook itself. If I have missed out on something, you could open an issue or pull-request on Github or email me about it.
 
 ## Working of The Game
 
@@ -25,7 +25,7 @@ Thats a loads of stuff in one paragraph, ill quickly break it down for you :)
 
 ## What OpenCV Does:
 
-!["Matrix"](/src/public/matrix%20.png)
+!["Matrix"](/images/matrix.png)
 
 OpenCV reads from the webcam and stores each frame as a matrix of BRG (Blue, Red, Green) values of each pixel of the image. BRG is essentially RGB (Red, Green, Blue) values but reversed. OpenCV reads in images in BGR format instead of RGB because when OpenCV was first being developed, BGR color format was popular among camera manufacturers and image software providers. The red channel was considered one of the least important color channels so was listed last. However, now the standard has changed and most image software and cameras use RGB format,due to better image quality.
 
@@ -33,7 +33,7 @@ OpenCV reads from the webcam and stores each frame as a matrix of BRG (Blue, Red
 
 Mediapipe is basically a pre-made AI/ML solutions/modals which Google has made available to the general public for free.It provides a variety of pre-built, customizable solutions for various use cases like object tracking, audio classification.I used the Hand Gesture Recognition Solution which uses the hand landmark model. The hand landmark model bundle detects the key-point localization of 21 hand-knuckle coordinates within the detected hand regions. The model was trained on approximately 30K real-world images, as well as several rendered synthetic hand models imposed over various backgrounds.
 
-!["Matrix"](/src/public/hand-landmarks.png)
+!["Matrix"](/images/hand-landmarks.png)
 
 ## Making them work together
 
@@ -41,7 +41,7 @@ OpenCV passes each frame to MediaPipe for analysis of the frame and predicting t
 
 From the detected hand, we extract the y axis value of the TIP of the finger and the PIP of the finger (look at the diagram below for better understanding). Note I am excluding the thumbs to reduce complications ie taking both x and y axis and comparing both. Also the wrist is the origin point of the axis
 
-!["Matrix"](/src/public/handlocations.png)
+!["Matrix"](/images/handlocations.png)
 
 Now that we have y axis values of all fingers, we'll compare them. In digital images, the height increases top to bottom and width increases right to left.Here we are dealing with just the height.
 

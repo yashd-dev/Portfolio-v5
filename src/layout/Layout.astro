@@ -63,6 +63,12 @@ import Gradient from "../components/gradient.astro";
 	>
 		<Gradient />
 		<main class="flex flex-col gap-10 justify-center my-auto">
+			<ul role="list" class="flex flex-row gap-2">
+				<li class="hover:text-white"><a href="/">Home</a></li>
+				<li>/</li>
+				<li class="hover:text-white"><a href="/posts">Blogs</a></li>
+			</ul>
+
 			<slot transition:animate="none" />
 		</main>
 	</body>

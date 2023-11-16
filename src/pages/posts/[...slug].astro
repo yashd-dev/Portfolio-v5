@@ -19,7 +19,7 @@ import { fade } from "astro:transitions";
 
 <Layout transition:name="hero">
 	<article class="article">
-		<h1 transition:name="post-title" transition:animate="slide">
+		<h1 transition:name={entry.slug} transition:animate="fade">
 			{entry.data.title}
 		</h1>
 		<img src={entry.data.image.url} />
