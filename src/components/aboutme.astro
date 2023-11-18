@@ -3,14 +3,18 @@ import { Image } from "astro:assets";
 import Yash from "../public/Yash.webp";
 ---
 
-<h1 class="serif text-3xl md:text-5xl text-neutral-100">Helou There!</h1>
+<h1 class="serif text-4xl md:text-5xl text-neutral-100">Helou There!</h1>
 <div class="flex flex-col md:flex-row w-full gap-10 md:gap-0">
 	<p
-		class="w-auto max-w-[50ch] leading-6 text-base font-thin text-white md:text-neutral-300"
+		class="w-auto max-w-[50ch] leading-6 text-lg font-thin text-white md:text-neutral-300"
 	>
-		I am Yash Deshpande, a 18 year old student in Mumbai. Currently I have
-		interests in Linux (hacking it), attempting to making cool shit with C,
-		and somewhat experimenting with web development!
+		I am <span
+			class="italic text-transparent bg-clip-text bg-gradient-to-r from-pink-300 via-purple-300 to-indigo-400"
+		>
+			Yash Deshpande</span
+		> a 18 year old student in Mumbai. Currently I have interests in Linux
+		(hacking it), attempting to making cool shit with C, and somewhat
+		experimenting with web development!
 	</p>
 	<Image
 		src={Yash}

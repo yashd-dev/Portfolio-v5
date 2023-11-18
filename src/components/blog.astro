@@ -15,8 +15,10 @@ const sortedPosts = allPosts.sort(
 
 <article class="flex flex-col gap-8">
 	<div class="flex w-full flex-row justify-between gap-2">
-		<h3 class="text-lg text-neutral-100 serif">Latest posts</h3>
-		<a href="/posts" target="_self"> See all posts</a>
+		<h3 class="serif text-2xl md:text-3xl text-neutral-100">
+			Latest posts
+		</h3>
+		<a href="/posts" target="_self" class="text-lg"> See all posts</a>
 	</div>
 	<section class="flex flex-col gap-4 md:flex-row md:flex-wrap">
 		{
@@ -29,7 +31,7 @@ const sortedPosts = allPosts.sort(
 						>
 							<div class="flex w-full flex-col justify-between gap-2 md:flex-row md:items-center">
 								<p
-									class="text-neutral-100 font-serif "
+									class="text-neutral-100 font-serif text-lg "
 									transition:name={`${post.slug} title`}
 								>
 									{post.data.title}
@@ -40,8 +42,8 @@ const sortedPosts = allPosts.sort(
 									</p>
 
 									<svg
-										width="18"
-										height="18"
+										width="40"
+										height="40"
 										viewBox="0 0 18 18"
 										fill="none"
 										class="transition-all duration-300 group-hover:translate-x-1"

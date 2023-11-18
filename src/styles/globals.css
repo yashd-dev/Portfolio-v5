@@ -6,10 +6,7 @@
   font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
   font-weight: 600;
 }
-h1,
-h2,
-h3,
-p,
+*,
 .satoshi {
   font-family:
     Satoshi,
@@ -38,14 +35,27 @@ p,
 }
 
 .bg {
-  background-color: #000000;
-  background-image: url("/src/public/234.jpg");
+  background-color: black;
+  background-image: url("/src/public/grainybg.png");
+  /* background-image: url(https://www.raycast.com/_next/static/media/splash.4edddc9a.jpg); */
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
   position: sticky;
   z-index: -100;
+}
+
+.bg2 {
+  background-image: url("/src/public/Noise.svg");
+  mix-blend-mode: soft-light;
+  /* background-image: url(https://www.raycast.com/_next/static/media/splash.4edddc9a.jpg); */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  position: sticky;
+  z-index: -90;
 }
 
 .article {
